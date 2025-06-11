@@ -1,36 +1,22 @@
-const dadosCardControleMedicamentos = {
-    titulo: 'Controle de Medicamentos',
-    imagem: './assets/controle-de-medicamentos.png',
-    gif: 'https://i.imgur.com/SDgwx8m.gif',
-    urlRepositorio: 'https://github.com/academiadoprogramador-fullstack/controle-de-medicamentos-2025',
-    stack: [
-        'https://skillicons.dev/icons?i=html&theme=light',
-        'https://skillicons.dev/icons?i=css&theme=light',
-        'https://skillicons.dev/icons?i=cs&theme=light',
-        'https://skillicons.dev/icons?i=net&theme=light',
-    ],
-    descricao: `O sistema de Controle de Medicamentos apresenta o conceito de gerenciamento de um posto de saúde, com o controle de fornecimento, estoque, funcionários, pacientes e retirada de prescrições — com foco na rastreabilidade das movimentações de estoque.`
-};
-
 const dadosCardGestaoEquipamentos = {
-    titulo: 'Gestão de Equipamentos',
-    imagem: './assets/gestao-de-equipamentos.png',
+    titulo: 'GestÃ£o de Equipamentos',
+    imagem: './assets/GestaoDeEquipamentos.png',
     gif: '',
-    urlRepositorio: 'https://github.com/academiadoprogramador-fullstack/gestao-de-equipamentos-2025',
+    urlRepositorio: 'https://github.com/Philipisauer/gestao-de-equipamentos-Sauer',
     stack: [
         'https://skillicons.dev/icons?i=html&theme=light',
         'https://skillicons.dev/icons?i=css&theme=light',
         'https://skillicons.dev/icons?i=cs&theme=light',
         'https://skillicons.dev/icons?i=net&theme=light',
     ],
-    descricao: `O sistema de Gestão de Equipamentos controla o estoque de um almoxarifado, com a gestão de equipamentos e o registro de chamados de manutenção que eventualmente ocorrem durante o uso dos equipamentos. Também são inclusas informações sobre os fabricantes dos equipamentos para contato de suporte ou compras.`
+    descricao: `O sistema de GestÃ£o de Equipamentos controla o estoque de um almoxarifado, com a gestÃ£o de equipamentos e o registro de chamados de manutenÃ§Ã£o que eventualmente ocorrem durante o uso dos equipamentos. TambÃ©m sÃ£o inclusas informaÃ§Ãµes sobre os fabricantes dos equipamentos para contato de suporte ou compras.`
 }
 
 let cardSelecionado;
 
 function carregarDadosCardAtual() {
     if (!cardSelecionado)
-        throw new Error('Card não selecionado.');
+        throw new Error('Card nÃ£o selecionado.');
 
     const imgCard = document.getElementById('imgCard');
     const stackCard = document.getElementById('stackCard');
@@ -55,14 +41,6 @@ function carregarDadosCardAtual() {
 }
 
 function selecionarPrimeiroCard() {
-    if (cardSelecionado == dadosCardControleMedicamentos)
-        return;
-
-    cardSelecionado = dadosCardControleMedicamentos;
-    carregarDadosCardAtual();
-}
-
-function selecionarSegundoCard() {
     if (cardSelecionado == dadosCardGestaoEquipamentos)
         return;
 
@@ -77,11 +55,9 @@ function abrirModalProjeto() {
 
 function main() {
     const btnSelecionarPrimeiroCard = document.getElementById("btnSelecionarPrimeiroCard");
-    const btnSelecionarSegundoCard = document.getElementById("btnSelecionarSegundoCard");
     const btnVerProjeto = document.getElementById("btnVerProjeto")
 
     btnSelecionarPrimeiroCard.addEventListener('click', selecionarPrimeiroCard);
-    btnSelecionarSegundoCard.addEventListener('click', selecionarSegundoCard);
     btnVerProjeto.addEventListener('click', abrirModalProjeto);
 
     selecionarPrimeiroCard();
